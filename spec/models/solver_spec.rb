@@ -20,4 +20,21 @@ RSpec.describe Solver do
       expect(@solver.reverse('Hello123')).to eq('321olleH')
     end
   end
+
+  describe 'FizzBuzz' do
+    it 'Should return Fizz' do
+      expect(@solver.fizzbuzz(9)).to eq('Fizz')
+      expect(@solver.fizzbuzz(27)).to eq('Fizz')
+    end
+
+    it 'Should return Buzz' do
+      expect(@solver.fizzbuzz(20)).to eq('Buzz')
+      expect(@solver.fizzbuzz(35)).to eq('Buzz')
+    end
+
+    it 'Should return FizzBuzz' do
+      expect(@solver.fizzbuzz(15)).to eq('FizzBuzz')
+      expect(@solver.fizzbuzz(3000)).to eq('FizzBuzz')
+    end
+  end
 end
