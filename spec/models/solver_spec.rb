@@ -13,4 +13,11 @@ RSpec.describe Solver do
       expect { @solver.factorial(-1) }.to raise_error(Exception, 'Cant be factorial by negative numbers!')
     end
   end
+
+  describe 'Reverse' do
+    it 'Should reverse the word' do
+      expect(@solver.reverse('Hello!')).to eq('!olleH')
+      expect(@solver.reverse('Hello123')).to eq('321olleH')
+    end
+  end
 end
